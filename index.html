@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Input Table</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<table border="1">
+  <tr style="border:1px solid black;">
+    <th>Type</th>
+    <th>Control</th>
+    <th>Value Entered</th>
+  </tr>
+  <tr>
+    <td style="height:3em;text-align:center;">ONE</td>
+    <td id="twoAnswer" style="background-color:lightgreen;">
+      <input id="one" type=checkbox>one</input>
+      <input id="two" type=checkbox>two</input>
+  </td>
+  <td id="trueFalse"></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;">TWO</td>
+    <td height="10px" style="background-color:lightpink;">
+      <p style=" margin-top:1.5em;background-color:lightyellow;">Type Your Name!</p>
+      <input id="name" type=texarea style="float:left; width:60%; height:60%;margin-bottom:2em;margin-right:1em;"></input>
+    </td>
+    <td id="nameAnswer"></td>
+    
+  </tr>
+  <tr>
+    <td style="height:3em;text-align:center;">THREE</td>
+    <td style="background-color:lightblue;">
+      <p style="float:left;">Pick a Day</p>
+      <select name="select" id="select" style ="float:left; margin-top:1em; margin-left:2em;">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+     </select>
+    </td>
+    <td id="dayOfTheWeek"></td>
+  </tr>
+</table>
+<button id="submitButton" type="submit" style="margin-top:3rem;margin-left:.5em;">Submit</button>
+
+<script>
+$(document).ready(function(){
+  $( "button" ).click(function() {
+  //alert( "Handler for .click() called." );
+    //first I tried to make an alert to even see if it was doing anything
+  $("#select").appendTo("#dayOfTheWeek");
+  $("#name").appendTo("#nameAnswer");
+  $("#one", "#two").prop().appendTo("#trueFalse");
+});
+  
+  //$(submit).onClick(){alert.("you clicked")};
+  //$("#submitButton").click(function () {
+           // $("#answer1").append("#select"());
+        //});
+  
+});
+
+  
+</script>
+</body>
+<html>
